@@ -1,5 +1,5 @@
 import java.util.Arrays;
-class Main {
+class ThirdLargestNumber {
     static int getThirdLargestInt(int[] arr){
         int largest= Integer.MIN_VALUE;
         int secondlargest= Integer.MIN_VALUE;
