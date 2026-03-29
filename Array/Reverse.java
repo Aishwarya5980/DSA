@@ -26,9 +26,32 @@ class Reverse{
         }
         System.out.println(Arrays.toString(temp));
     }    
+    static int maxProduct(int[] arr) {
+        // code here
+        Arrays.sort(arr);
+        int n=arr.length;
+        int mul=Integer.MIN_VALUE;
+        // To maximise the result return the maximum of  product of the last 
+        // three elements of the array and the product of the first two elements
+        // and last element.
+        // if(n>3){
+        //     mul= arr[n-1]*arr[n-2]*arr[n-3];
+        // }else if(n<=2){
+        //     mul= arr[n-1]*arr[n-2];
+        // }else{
+        //     mul= arr[n-1];
+        // }
+        
+        // mul=Math.max(arr[n-1]*arr[n-2]*arr[n-3],arr[0]*arr[1]*arr[2]);
+        // return mul;
+        return Math.max(arr[0] * arr[1] * arr[n - 1],
+                        arr[n - 1] * arr[n - 2] * arr[n - 3]);
+        
+    }
     
     public static void main(String [] args){
         int[] arr= {56,32,85,98,22};
         reverse2(arr);
+        maxProduct(arr);
     }
 }
